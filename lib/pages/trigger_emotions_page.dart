@@ -83,8 +83,8 @@ class _TriggerEmotionsPageState extends State<TriggerEmotionsPage> {
                             borderRadius: BorderRadius.circular(64),
                             onPressed: _currentIconPath != null
                                 ?
-                                () {
-                              context.read<MoodsBloc>().updateTrigger(
+                                () async {
+                              await context.read<MoodsBloc>().updateTrigger(
                                   widget.trigger.id!,
                                   widget.trigger.copyWith(iconsPath: [...[_currentIconPath!]]));
                               Navigator.of(context).pop();

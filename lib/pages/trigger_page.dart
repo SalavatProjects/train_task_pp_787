@@ -85,7 +85,7 @@ class TriggerPage extends StatelessWidget {
                               child: GestureDetector(
                                 behavior: HitTestBehavior.opaque,
                                 onTap: () {
-                                  Navigator.of(context).pushNamed(AppRoutes.triggerRecords, arguments: triggers[index]);
+                                  Navigator.of(context).pushNamed(AppRoutes.triggerRecords, arguments: triggers[index].id);
                                 },
                                 child: Row(
                                   children: [

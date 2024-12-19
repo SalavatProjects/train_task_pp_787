@@ -55,10 +55,14 @@ class MoodsBloc extends Cubit<MoodsState> {
     await getTriggers();
   }
 
-  Future<void> updateTrigger(int id, TriggerState trigger, BuildContext context, VoidCallback onSuccess) async {
+  Future<void> updateTrigger(int id, TriggerState trigger) async {
     await AppIsarDatabase.updateTrigger(id, trigger.toIsarModel());
     await getTriggers();
-    onSuccess.call();
+  }
+
+  Future<void> deleteTrigger(int id) async {
+    await AppIsarDatabase.deleteTrigger(id);
+    await getTriggers();
   }
 
   Future<void> getAnchors() async {

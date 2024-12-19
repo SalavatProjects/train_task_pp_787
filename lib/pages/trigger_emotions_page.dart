@@ -26,6 +26,13 @@ class TriggerEmotionsPage extends StatefulWidget {
 class _TriggerEmotionsPageState extends State<TriggerEmotionsPage> {
   String? _currentIconPath;
 
+  List<String> _iconPaths = [];
+  @override
+  void initState() {
+    super.initState();
+    _iconPaths = List.from(widget.trigger.iconsPath);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,14 +90,12 @@ class _TriggerEmotionsPageState extends State<TriggerEmotionsPage> {
                             borderRadius: BorderRadius.circular(64),
                             onPressed: _currentIconPath != null
                                 ?
-                                () async {
-                              await context.read<MoodsBloc>().updateTrigger(
+                                () {
+                              _iconPaths.add(_currentIconPath!);
+                              context.read<MoodsBloc>().updateTrigger(
                                   widget.trigger.id!,
-                                  widget.trigger.copyWith(iconsPath: [...[_currentIconPath!]]),
-                              context, () {
-                                    if (!mounted) return;
-                                    Navigator.of(context).pop();
-                              });
+                                  widget.trigger.copyWith(iconsPath: _iconPaths));
+                              Navigator.of(context).pop();
                             } : null,
                             child: Text('Add new trigger', style: AppStyles.bodyMedium.copyWith(color: AppColors.white),)),
                       ),

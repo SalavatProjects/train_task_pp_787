@@ -138,7 +138,7 @@ class _AppWidget extends StatelessWidget {
                   ),
                   AppRoutes.triggerRecords => CupertinoPageRoute(
                     settings: settings,
-                    builder: (context) => TriggerRecordsPage(trigger: settings.arguments as TriggerState,)
+                    builder: (context) => TriggerRecordsPage(triggerId: settings.arguments as int,)
                   ),
                   AppRoutes.triggerEmotions => CupertinoPageRoute(
                     settings: settings,

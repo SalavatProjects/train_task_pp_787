@@ -76,6 +76,10 @@ abstract class AppIsarDatabase {
     });
   }
 
+  static Future<void> deleteTrigger(int id) async {
+    await _instance.writeTxn(() async => await _instance.triggers.delete(id));
+  }
+
   static Future<List<Anchor>> getAnchors() async {
     return await _instance.writeTxn(
           () async => await _instance.anchors.where().findAll(),

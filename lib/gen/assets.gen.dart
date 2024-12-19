@@ -18,8 +18,11 @@ class $AssetsIconsGen {
   /// File path: assets/icons/chevron-right.svg
   String get chevronRight => 'assets/icons/chevron-right.svg';
 
+  /// File path: assets/icons/star.svg
+  String get star => 'assets/icons/star.svg';
+
   /// List of all assets
-  List<String> get values => [chevronLeft, chevronRight];
+  List<String> get values => [chevronLeft, chevronRight, star];
 }
 
 class $AssetsImagesGen {
@@ -89,6 +92,13 @@ class $AssetsImagesGen {
   /// File path: assets/images/Tension.png
   AssetGenImage get tension => const AssetGenImage('assets/images/Tension.png');
 
+  /// File path: assets/images/about us.png
+  AssetGenImage get aboutUs =>
+      const AssetGenImage('assets/images/about us.png');
+
+  /// File path: assets/images/anchor.png
+  AssetGenImage get anchor => const AssetGenImage('assets/images/anchor.png');
+
   /// File path: assets/images/another person.png
   AssetGenImage get anotherPerson =>
       const AssetGenImage('assets/images/another person.png');
@@ -120,6 +130,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/emotion influence.png
   AssetGenImage get emotionInfluence =>
       const AssetGenImage('assets/images/emotion influence.png');
+
+  /// File path: assets/images/feedback.png
+  AssetGenImage get feedback =>
+      const AssetGenImage('assets/images/feedback.png');
 
   /// File path: assets/images/formless blue.png
   AssetGenImage get formlessBlue =>
@@ -153,6 +167,10 @@ class $AssetsImagesGen {
   AssetGenImage get positivityAnchors =>
       const AssetGenImage('assets/images/positivity anchors.png');
 
+  /// File path: assets/images/privacy policy.png
+  AssetGenImage get privacyPolicy =>
+      const AssetGenImage('assets/images/privacy policy.png');
+
   /// File path: assets/images/reflection complete.png
   AssetGenImage get reflectionComplete =>
       const AssetGenImage('assets/images/reflection complete.png');
@@ -177,6 +195,10 @@ class $AssetsImagesGen {
   AssetGenImage get shareAppWhite =>
       const AssetGenImage('assets/images/share app white.png');
 
+  /// File path: assets/images/share app yellow.png
+  AssetGenImage get shareAppYellow =>
+      const AssetGenImage('assets/images/share app yellow.png');
+
   /// File path: assets/images/squares blue.png
   AssetGenImage get squaresBlue =>
       const AssetGenImage('assets/images/squares blue.png');
@@ -188,6 +210,10 @@ class $AssetsImagesGen {
   /// File path: assets/images/squares yellow.png
   AssetGenImage get squaresYellow =>
       const AssetGenImage('assets/images/squares yellow.png');
+
+  /// File path: assets/images/terms of use.png
+  AssetGenImage get termsOfUse =>
+      const AssetGenImage('assets/images/terms of use.png');
 
   /// File path: assets/images/timeline.png
   AssetGenImage get timeline =>
@@ -213,6 +239,13 @@ class $AssetsImagesGen {
   AssetGenImage get triggerNameCreated =>
       const AssetGenImage('assets/images/trigger name created.png');
 
+  /// File path: assets/images/version.png
+  AssetGenImage get version => const AssetGenImage('assets/images/version.png');
+
+  /// File path: assets/images/write down things.png
+  AssetGenImage get writeDownThings =>
+      const AssetGenImage('assets/images/write down things.png');
+
   /// List of all assets
   List<AssetGenImage> get values => [
         affection,
@@ -233,6 +266,8 @@ class $AssetsImagesGen {
         onboarding3,
         sadness,
         tension,
+        aboutUs,
+        anchor,
         anotherPerson,
         checkIn,
         checkedIn,
@@ -241,6 +276,7 @@ class $AssetsImagesGen {
         circlesYellow,
         emotionInBody,
         emotionInfluence,
+        feedback,
         formlessBlue,
         formlessRed,
         formlessYellow,
@@ -249,21 +285,26 @@ class $AssetsImagesGen {
         noRecordsInTrigger,
         noTriggersYet,
         positivityAnchors,
+        privacyPolicy,
         reflectionComplete,
         reflection,
         sameThing,
         settings,
         shareAppViolet,
         shareAppWhite,
+        shareAppYellow,
         squaresBlue,
         squaresRed,
         squaresYellow,
+        termsOfUse,
         timeline,
         trianglesBlue,
         trianglesRed,
         trianglesYellow,
         triggerMap,
-        triggerNameCreated
+        triggerNameCreated,
+        version,
+        writeDownThings
       ];
 }
 

@@ -4,15 +4,20 @@ import 'package:flutter/services.dart';
 import 'package:flutter_app_info/flutter_app_info.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:pp_787/bloc/anchor_state.dart';
 import 'package:pp_787/bloc/reflection_bloc.dart';
 import 'package:pp_787/bloc/trigger_state.dart';
 import 'package:pp_787/navigation/routes.dart';
+import 'package:pp_787/pages/about_us_page.dart';
 import 'package:pp_787/pages/check_in_page.dart';
 import 'package:pp_787/pages/create_trigger_name_page.dart';
+import 'package:pp_787/pages/edit_positivity_anchors_page.dart';
 import 'package:pp_787/pages/main_page.dart';
 import 'package:pp_787/pages/onboarding_page.dart';
+import 'package:pp_787/pages/positivity_anchors_page.dart';
 import 'package:pp_787/pages/privacy_page.dart';
 import 'package:pp_787/pages/reflection_page.dart';
+import 'package:pp_787/pages/settings_page.dart';
 import 'package:pp_787/pages/splash_page.dart';
 import 'package:pp_787/pages/timeline_page.dart';
 import 'package:pp_787/pages/trigger_emotions_page.dart';
@@ -138,6 +143,22 @@ class _AppWidget extends StatelessWidget {
                   AppRoutes.triggerEmotions => CupertinoPageRoute(
                     settings: settings,
                     builder: (context) => TriggerEmotionsPage(trigger: settings.arguments as TriggerState)
+                  ),
+                  AppRoutes.positivityAnchors => CupertinoPageRoute(
+                    settings: settings,
+                    builder: (context) => const PositivityAnchorsPage(),
+                  ),
+                  AppRoutes.editPositivityAnchors => CupertinoPageRoute(
+                    settings: settings,
+                    builder: (context) => EditPositivityAnchorsPage(anchor: settings.arguments as AnchorState?,)
+                  ),
+                  AppRoutes.settings => CupertinoPageRoute(
+                    settings: settings,
+                    builder: (context) => const SettingsPage(),
+                  ),
+                  AppRoutes.aboutUs => CupertinoPageRoute(
+                    settings: settings,
+                    builder: (context) => const AboutUsPage(),
                   ),
                   _ => null,
                   },

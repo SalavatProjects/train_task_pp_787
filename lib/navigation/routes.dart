@@ -9,4 +9,8 @@ abstract class AppRoutes {
   static const createTriggerName = '/create_trigger_name';
   static const triggerRecords = '/trigger_records';
   static const triggerEmotions = '/trigger_emotions';
+  static const positivityAnchors = '/positivity_anchors';
+  static const editPositivityAnchors = '/edit_positivity_anchors';
+  static const settings = '/settings';
+  static const aboutUs = '/about_us';
 }

@@ -86,8 +86,11 @@ class _TriggerEmotionsPageState extends State<TriggerEmotionsPage> {
                                 () async {
                               await context.read<MoodsBloc>().updateTrigger(
                                   widget.trigger.id!,
-                                  widget.trigger.copyWith(iconsPath: [...[_currentIconPath!]]));
-                              Navigator.of(context).pop();
+                                  widget.trigger.copyWith(iconsPath: [...[_currentIconPath!]]),
+                              context, () {
+                                    if (!mounted) return;
+                                    Navigator.of(context).pop();
+                              });
                             } : null,
                             child: Text('Add new trigger', style: AppStyles.bodyMedium.copyWith(color: AppColors.white),)),
                       ),

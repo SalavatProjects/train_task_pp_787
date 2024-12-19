@@ -1,4 +1,5 @@
 import 'package:bloc/bloc.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:meta/meta.dart';
 import 'package:equatable/equatable.dart';
 import 'package:pp_787/bloc/anchor_state.dart';
@@ -54,9 +55,10 @@ class MoodsBloc extends Cubit<MoodsState> {
     await getTriggers();
   }
 
-  Future<void> updateTrigger(int id, TriggerState trigger) async {
+  Future<void> updateTrigger(int id, TriggerState trigger, BuildContext context, VoidCallback onSuccess) async {
     await AppIsarDatabase.updateTrigger(id, trigger.toIsarModel());
     await getTriggers();
+    onSuccess.call();
   }
 
   Future<void> getAnchors() async {

@@ -112,12 +112,12 @@ class MainPage extends StatelessWidget {
                   _MainCardBtn(
                       imagePath: Assets.images.positivityAnchors.path,
                       text: 'Positivity anchors',
-                      onTap: () {}
+                      onTap: () => Navigator.of(context).pushNamed(AppRoutes.positivityAnchors),
                   ),
                   _MainCardBtn(
                     imagePath: Assets.images.settings.path,
                     text: 'Settings',
-                    onTap: () {},
+                    onTap: () => Navigator.of(context).pushNamed(AppRoutes.settings),
                   ),
                 ],
               ),
